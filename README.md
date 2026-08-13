@@ -1,12 +1,12 @@
 # sensor-test-harness
 
+[![CI](https://github.com/SahanDurak/sensor-test-harness/actions/workflows/ci.yml/badge.svg)](https://github.com/SahanDurak/sensor-test-harness/actions/workflows/ci.yml)
+![Python](https://img.shields.io/badge/python-3.11%2B-blue)
+![License](https://img.shields.io/badge/license-MIT-green)
+
 A small Python framework for testing medical vital sign monitoring logic
 against simulated sensor streams. Built to explore best practices in test
 automation, threshold-based alerting, and reporting.
-
-> **Disclaimer:** This project is for learning and demonstration purposes
-> only. The thresholds and models here are illustrative and must never be
-> used for real medical decisions.
 
 ## What it does
 
