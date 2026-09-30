@@ -108,3 +108,22 @@ class RespiratoryRateSensor(VitalSignSensor):
 
     def __init__(self):
         super().__init__("respiratory_rate", baseline=16.0, noise_std=1.0)
+
+class BloodPressureSensor(VitalSignSensor):
+    """should show how the blood pressure is now and is changing over time
+    in comparison to the baseline."""
+
+    def __init__(self):
+        super().__init__("blood_pressure", baseline=120.0, noise_std=5.0)
+
+    def compare_to_baseline(self, reading: SensorReading) -> str:
+   
+        """Compare the current reading to the baseline and return a status string."""
+        
+        if reading.value < self.baseline - 10:
+            return "Low blood pressure"
+        elif reading.value > self.baseline + 10:
+            return "High blood pressure"
+        else:
+            return "Normal blood pressure"
+  

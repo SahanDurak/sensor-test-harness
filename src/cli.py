@@ -8,13 +8,12 @@ Example usage:
 """
 
 import argparse
-from pathlib import Path
 import sys
+from pathlib import Path
 
 from src.analyzer import VitalSignAnalyzer
 from src.report_generator import generate_report
 from src.sensors import HeartRateSensor, RespiratoryRateSensor, SpO2Sensor
-
 
 SENSOR_REGISTRY = {
     "heart_rate": HeartRateSensor,

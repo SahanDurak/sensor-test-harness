@@ -11,13 +11,13 @@ from datetime import datetime
 from pathlib import Path
 
 import matplotlib
+
 matplotlib.use("Agg")  # non-interactive backend, required for CI
 import matplotlib.pyplot as plt
 from jinja2 import Template
 
 from src.analyzer import Alert, AlertLevel, VitalSignAnalyzer
 from src.sensors import SensorReading
-
 
 HTML_TEMPLATE = """<!DOCTYPE html>
 <html lang="en">
